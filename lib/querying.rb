@@ -18,7 +18,7 @@ ORDER BY COUNT(characters.species) DESC LIMIT 1;"
 end
 
 def select_name_and_series_subgenres_of_authors
-  "SELECT series.title, subgenres.name FROM series 
+  "SELECT authors.name, subgenres.name FROM series 
 INNER JOIN authors ON authors.id = series.author_id 
 INNER JOIN subgenres ON subgenres.id = series.subgenre_id;"
 end
